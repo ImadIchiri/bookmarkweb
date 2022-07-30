@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awsome V-6.1.1 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Main CSS File -->
+    <link rel="stylesheet" href="style/style.css" />
+    <title>Links Saver |Welcome</title>
+  </head>
+  <body>
+    <!-- Start Header Section -->
+    <header>
+      <div class="container">
+        <i class="fa-solid fa-arrow-left go-back" id="go-back"></i>
+        <div class="logo">
+          <i class="fa-solid fa-bookmark"></i>
+          <h1 class="logo-title" title="Bookmark Website">BMWeb</h1>
+        </div>
+      </div>
+    </header>
+    <!-- End Header Section -->
+    <!-- Start Main Section -->
+    <section class="main-section" id="main-section">
+      <div class="container">
+        <!-- Start Folder Container -->
+        <div id="folders-container">
+          <!-- Folders Will Be Added Using JavaScript -->
+        </div>
+        <!-- End Folder Container -->
+        <!-- Start Inside Folder -->
+        <div id="inside-folder">
+          <!-- Add New Task Btn -->
+          <i
+            class="fa-solid fa-circle-plus open-new-task"
+            id="open-new-task"
+          ></i>
+          <div class="folder-header">
+            <div class="part-one">
+              <img id="folder-header-image" src="" alt="" />
+              <div class="text-content">
+                <h2 id="folder-title" class="title">Facebook</h2>
+                <p>Add your favorite posts, videos and photos</p>
+              </div>
+            </div>
+            <input class="search-input" type="text" placeholder="Search..." />
+          </div>
+          <div id="saved-links">
+            <!-- Cards Will Be Adde Using JavaScript -->
+          </div>
+        </div>
+        <!-- End Inside Folder -->
+      </div>
+    </section>
+    <!-- End Main Section -->
+    <!-- Start Favorite Section -->
+    <section class="favorite-section" id="favorite-section">
+      <div class="container">
+        <div class="folder-header">
+          <div class="part-one">
+            <img src="images/categories-images/heart.png" alt="" />
+            <div class="text-content">
+              <h2 id="folder-title" class="title">Favorites</h2>
+              <p>
+                Here where you can see all your favorite posts, videos and
+                photos
+              </p>
+            </div>
+          </div>
+          <input class="search-input" type="text" placeholder="Search..." />
+        </div>
+        <div id="favorites-container">
+          <!-- Code -->
+        </div>
+      </div>
+    </section>
+    <!-- End Favorite Section -->
+    <!-- Start History Section -->
+    <section class="history-section" id="history-section">
+      <div class="container">
+        <div class="folder-header">
+          <div class="part-one">
+            <img src="images/categories-images/history.png" alt="" />
+            <div class="text-content">
+              <h2 id="folder-title" class="title">History</h2>
+              <p>Here where you can see all your posts, videos and photos</p>
+            </div>
+          </div>
+          <input class="search-input" type="text" placeholder="Search..." />
+        </div>
+        <div id="history-container">
+          <!-- Code -->
+        </div>
+      </div>
+    </section>
+    <!-- End History Section -->
+    <!-- Start New Task Section -->
+    <section class="container new-task" id="new-task">
+      <!-- x Button -->
+      <i
+        class="fa-solid fa-circle-xmark close-new-task"
+        id="close-new-task"
+      ></i>
+      <input type="text" id="task-id" placeholder="This Is Hidden" />
+      <input type="text" id="task-favorite" placeholder="This Is Hidden" />
+      <input type="text" id="task-title" placeholder="Title" />
+      <textarea
+        id="task-description"
+        placeholder="Description (optional)"
+      ></textarea>
+      <input type="url" id="task-url" placeholder="URL" />
+      <select id="task-folder">
+        <option value="" selected disabled>Choose Folder</option>
+        <!-- <option value="folder-id">FolderName</option> -->
+      </select>
+      <button type="button" class="add-btn" id="add-btn">ADD</button>
+      <button type="button" class="add-btn" id="edite-btn">Edite</button>
+    </section>
+    <!-- End New Task Section -->
+    <!-- Start Footer Section -->
+    <footer>
+      <div class="container">
+        <ul id="footer-list">
+          <li class="active" id="home-footer">
+            <i class="fa-solid fa-house"></i>
+            <h2>Home</h2>
+          </li>
+          <li id="favorite-footer">
+            <i class="fa-solid fa-heart"></i>
+            <h2>Favorites</h2>
+          </li>
+          <li id="history-footer">
+            <i class="fa-solid fa-clock-rotate-left"></i>
+            <h2>History</h2>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <!-- End Footer Section -->
+    <script src="javaScript/main.js" type="module"></script>
+    <script src="javaScript/caterogies.js" type="module"></script>
+    <script src="javaScript/pushIntoLocalStorage.js" type="module"></script>
+    <script src="javaScript/editeTask.js" type="module"></script>
+    <script src="javaScript/favorites.js" type="module"></script>
+    <script src="javaScript/switchSections.js" type="module"></script>
+    <script src="javaScript/cards.js" type="module"></script>
+    <script src="javaScript/history.js" type="module"></script>
+    <script src="javaScript/delete.js" type="module"></script>
+  </body>
+</html>
