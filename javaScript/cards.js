@@ -3,6 +3,7 @@ import { deleteObject } from "./delete.js";
 import { editeFavorites } from "./editeTask.js";
 import { fillInputs } from "./main.js";
 import { localStorageContent } from "./pushIntoLocalStorage.js";
+import changeYtbImages from "./changeYtbImages.js";
 
 const mainSection = document.getElementById("main-section");
 const favoriteSection = document.getElementById("favorite-section");
@@ -32,6 +33,8 @@ function createCard(currObj) {
   const linkImage = document.createElement("img");
   linkImage.setAttribute("src", `${categoryId.image}`);
   linkImage.setAttribute("alt", `${currObj.title}`);
+
+  changeYtbImages(linkImage, currObj.url);
 
   const contentDiv = document.createElement("div");
   contentDiv.className = "content";
