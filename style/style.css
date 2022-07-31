@@ -21,13 +21,13 @@ ul li {
 
 /* If Empty */
 .empty-msg {
-  position: absolute;
+  position: relative;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateY(-50%);
   font-size: 2rem;
   font-weight: 300;
   color: #adadad;
+  text-align: center;
 }
 
 /* Folder Header Start */
@@ -286,6 +286,7 @@ header .logo i {
   border-radius: 1rem;
   margin: 0.5rem auto;
   padding: 1.1rem 1rem;
+  overflow-y: scroll;
 }
 
 .new-task input,
