@@ -289,6 +289,10 @@ header .logo i {
   overflow-y: scroll;
 }
 
+.new-task::-webkit-scrollbar {
+  display: none;
+}
+
 .new-task input,
 .new-task select,
 .new-task textarea {
